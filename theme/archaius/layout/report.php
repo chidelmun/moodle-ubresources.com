@@ -1,0 +1,30 @@
+<?php include 'partials/header.php'; ?>
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
+<?php include 'partials/page_header.php'; ?>
+<div id="regions-control"></div>
+<div id="page" class="main-content clearfix">
+    <div class="page-content report-page">
+        <div class="main-report-content">
+            <?php echo $OUTPUT->main_content() ?>
+        </div>
+        <?php if ($hassidepre) { ?>
+            <div id="report-region-pre" class="block-region">
+                <div class="region-content">
+                    <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+<?php include 'partials/footer.php' ?>
+<?php echo $OUTPUT->standard_end_of_body_html() ?>
+<script type = "text/javascript">
+    //<![CDATA[   
+    <?php if (!empty($PAGE->theme->settings->customjs)) {
+        echo $PAGE->theme->settings->customjs;
+    } ?>
+    //]]>
+</script>
+</body>
+</html>
