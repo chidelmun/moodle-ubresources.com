@@ -7,7 +7,7 @@
 html,
 body {
   color: #222222;
-  background: [[setting:bgcolor]] !important;
+  background: url('/theme/image.php/archaius/theme/1399722116/pattern-gray')
 }
 a {
   color: #0088CC;
